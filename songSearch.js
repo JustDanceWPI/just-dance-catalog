@@ -8,8 +8,9 @@ function searchFunction() {
     for(i=0 ; i< li.length; i++){
         song = document.getElementsByClassName('song-name')[i];
         text = document.getElementsByClassName('song-text')[i];
-        d = document.getElementsByClassName('badge-pill')[i];
-        if(d.innerText.toLowerCase().indexOf(filter) > -1 ||
+        d = document.getElementsByClassName('difficulty')[i];
+        if(
+            d.innerText.toLowerCase().indexOf(filter) > -1 ||
             song.innerText.toLowerCase().indexOf(filter) > -1 ||
             text.innerText.toLowerCase().indexOf(filter) > -1){
             li[i].style.display = "";
@@ -19,4 +20,9 @@ function searchFunction() {
             li[i].style.display = 'none';
         }
     }
+}
+
+function onClickCard(){
+    var img, name, text, badge;
+
 }

@@ -4,6 +4,9 @@ let createSongCard = (song) => {
 
     let card = document.createElement('li');
     card.className = 'card col-4 card-block';
+    card.setAttribute('href','#');
+    card.setAttribute('data-toggle','modal');
+    card.setAttribute('data-target','#exampleModalCenter');
 
     let cardImg = document.createElement('img');
     cardImg.className = 'card-img-top';
@@ -23,13 +26,23 @@ let createSongCard = (song) => {
 
     let badge = document.createElement('span');
     badge.innerText = song.difficulty;
-    badge.className = 'notify-badge badge-pill'+' d'+song.difficulty;
+    badge.className = 'difficulty notify-badge badge-pill'+' d'+song.difficulty;
 
     let clickable = document.createElement('a');
     clickable.className = 'stretched-link';
     clickable.setAttribute('href','#');
     clickable.setAttribute('data-toggle','modal');
     clickable.setAttribute('data-target','#exampleModalCenter');
+    clickable.onclick = () => {
+        $("#selectCardImg")[0].src = cardImg.src;
+        $("#selectCardName")[0].innerText = name.innerText;
+        $("#selectCardText")[0].innerText = text.innerText;
+        $("#selectCardBadge")[0].innerText = badge.innerText;
+        $("#selectCardBadge")[0].className = 'notify-badge badge-pill'+' d'+song.difficulty;
+    };
+
+
+
 
     card.appendChild(cardImg);
     cardBody.appendChild(name);
