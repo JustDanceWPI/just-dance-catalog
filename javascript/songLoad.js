@@ -1,5 +1,6 @@
-let songList;
-
+let songList, savedEmail, savedName;
+savedEmail = "";
+savedName = "";
 let createSongCard = (song) => {
 
     let card = document.createElement('li');
@@ -32,7 +33,7 @@ let createSongCard = (song) => {
     clickable.className = 'stretched-link';
     clickable.setAttribute('href','#');
     clickable.setAttribute('data-toggle','modal');
-    clickable.setAttribute('data-target','#exampleModalCenter');
+    clickable.setAttribute('data-target','#selectSongModal');
     clickable.onclick = () => {
         let selectBadge = $("#selectCardBadge")[0];
         $("#selectCardImg")[0].src = cardImg.src;
@@ -65,4 +66,17 @@ let initListOfSongs = () => {
     songs.forEach((task) => {
         createSongCard(task)
     })
+};
+
+let selectSong = () => {
+    let selectDifficulty = $("#selectCardBadge")[0].innerText;
+    let selectName = $("#selectCardName")[0].innerText;
+    let selectText = $("#selectCardText")[0].innerText;
+    let newLink = 'https://docs.google.com/forms/d/e/1FAIpQLSdSh_talpniBWAWFUA3DooVtuBHbAAhor1WTbl6P3NtfZnMJw/viewform?embedded=true&' +
+        'entry.897182823='+selectName+'&' +
+        'entry.844728591='+selectText+' '+selectDifficulty+'&' +
+        'entry.287909225=name&' +
+        'entry.133747851=email';
+    $("#google-form")[0].setAttribute('src', newLink);
+
 };

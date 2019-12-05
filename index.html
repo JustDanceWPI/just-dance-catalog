@@ -45,12 +45,12 @@
 
     </div>
 </header>
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<!-- Modal 1 -->
+<div class="modal fade" id="selectSongModal" tabindex="-1" role="dialog" aria-labelledby="selectSongModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Submit this song for queue?</h5>
+                <h5 class="modal-title" id="selectSongModalTitle">Select this song for queue?</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -66,11 +66,28 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-block btn-confirm">Continue</button>
+                <button type="button" class="btn btn-primary btn-block btn-confirm" data-toggle="modal" data-target="#submitSongModal" onclick="selectSong()">Continue</button>
             </div>
         </div>
     </div>
 </div>
+<!-- Modal 2 -->
+<div class="modal fade" id="submitSongModal" tabindex="-1" role="dialog" aria-labelledby="submitSongModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 40vw; min-width: 500px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="submitSongModalTitle">Submit this song for queue?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe id="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdSh_talpniBWAWFUA3DooVtuBHbAAhor1WTbl6P3NtfZnMJw/viewform?embedded=true" width="100%" height="868" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Google Forms iframe -->
 <!--list of songs to be populated-->
 <ul id="songList" class="row">
