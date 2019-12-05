@@ -2,23 +2,40 @@
 <html lang="en-US">
 <!-- styles and bootstrap-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="songStyle.css">
+<link rel="stylesheet" href="styling/songStyle.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <!-- custom scripts -->
-<script src="songCatalog.js"></script>
-<script src="songSearch.js"></script>
-<script src="songLoad.js"></script>
+<script src="javascript/songCatalog.js"></script>
+<script src="javascript/songSearch.js"></script>
+<script src="javascript/songLoad.js"></script>
 
-<link rel="icon" href="party.png" type="image/png">
+<link rel="icon" href="img/party.png" type="image/png">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="A free Just Dance app used for querying song into a Google Sheets spreadsheets for students">
+    <!-- Primary Meta Tags -->
+    <title>Just Dance Query</title>
+    <meta name="title" content="Just Dance Query | Queue up your songs for some of Goat's Head Restaurant's event!">
+    <meta name="description" content="A free Just Dance app used for querying song into a Google Sheets spreadsheets for WPI students. Presented by Goat's Head Restaurant, funded by SGA | Come dance and have fun!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://justdancewpi.github.io/just-dance-catalog/">
+    <meta property="og:title" content="Just Dance Query | Queue up your songs for some of Goat's Head Restaurant's event!">
+    <meta property="og:description" content="A free Just Dance app used for querying song into a Google Sheets spreadsheets for WPI students. Presented by Goat's Head Restaurant, funded by SGA | Come dance and have fun!">
+    <meta property="og:image" content="img/jdcover.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://justdancewpi.github.io/just-dance-catalog/">
+    <meta property="twitter:title" content="Just Dance Query | Queue up your songs for some of Goat's Head Restaurant's event!">
+    <meta property="twitter:description" content="A free Just Dance app used for querying song into a Google Sheets spreadsheets for WPI students. Presented by Goat's Head Restaurant, funded by SGA | Come dance and have fun!">
+    <meta property="twitter:image" content="img/jdcover.png">
+
     <meta name="keywords" content="Just Dance, Unlimited, Catalog, WPI, Goat's Head">
     <meta name="author" content="Panhavuth Lau">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just Dance Query</title>
 
 </head>
 <body onload="initListOfSongs()">
@@ -41,7 +58,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <img id="selectCardImg" class="card-img-top" src="https://via.placeholder.com/150"/>
+                <img id="selectCardImg" class="card-img-top" src="https://via.placeholder.com/150" alt="Placeholder image"/>
                 <div class="card-body d-flex flex-column">
                     <h5 id="selectCardName" class="card-title">name</h5>
                     <p id="selectCardText" class="card-text">text</p>

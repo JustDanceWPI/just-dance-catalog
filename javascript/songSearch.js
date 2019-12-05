@@ -21,8 +21,3 @@ function searchFunction() {
         }
     }
 }
-
-function onClickCard(){
-    var img, name, text, badge;
-
-}

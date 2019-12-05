@@ -34,11 +34,12 @@ let createSongCard = (song) => {
     clickable.setAttribute('data-toggle','modal');
     clickable.setAttribute('data-target','#exampleModalCenter');
     clickable.onclick = () => {
+        let selectBadge = $("#selectCardBadge")[0];
         $("#selectCardImg")[0].src = cardImg.src;
         $("#selectCardName")[0].innerText = name.innerText;
         $("#selectCardText")[0].innerText = text.innerText;
-        $("#selectCardBadge")[0].innerText = badge.innerText;
-        $("#selectCardBadge")[0].className = 'notify-badge badge-pill'+' d'+song.difficulty;
+        selectBadge.innerText = badge.innerText;
+        selectBadge.className = 'notify-badge badge-pill'+' d'+song.difficulty;
     };
 
 
