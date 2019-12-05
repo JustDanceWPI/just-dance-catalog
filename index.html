@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <!-- styles and bootstrap-->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="songStyle.css">
@@ -10,16 +10,26 @@
 <script src="songCatalog.js"></script>
 <script src="songSearch.js"></script>
 <script src="songLoad.js"></script>
+
+<link rel="icon" href="party.png" type="image/png">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="A free Just Dance app used for querying song into a Google Sheets spreadsheets for students">
+    <meta name="keywords" content="Just Dance, Unlimited, Catalog, WPI, Goat's Head">
+    <meta name="author" content="Panhavuth Lau">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Just Dance Query</title>
+
 </head>
 <body onload="initListOfSongs()">
-<!--Search bar-->
-<div class="search-bar">
-    <label for="searchInput"></label><input type="text" name="search" value="" autocomplete="on" id="searchInput" onkeyup="searchFunction()" placeholder="Search">
+<header>
+    <div class="search-bar">
+        <label for="searchInput"></label><input type="text" name="search" value="" autocomplete="off" id="searchInput" onkeyup="searchFunction()" placeholder="Search">
 
-</div>
+    </div>
+</header>
+<!--Search bar-->
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -41,8 +51,7 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                <button type="button" class="btn btn-primary">Yes</button>
+                <button type="button" class="btn btn-primary btn-block">Yes</button>
             </div>
         </div>
     </div>

@@ -3,7 +3,7 @@ let songList;
 let createSongCard = (song) => {
 
     let card = document.createElement('li');
-    card.className = 'card col-4 card-block';
+    card.className = 'card-block card';
     card.setAttribute('href','#');
     card.setAttribute('data-toggle','modal');
     card.setAttribute('data-target','#exampleModalCenter');
