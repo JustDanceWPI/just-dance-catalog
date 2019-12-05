@@ -1,4 +1,3 @@
-let songCatalog = fetch("songCatalog.json");
 let songList;
 
 let createSongCard = (song) => {
@@ -26,10 +25,17 @@ let createSongCard = (song) => {
     badge.innerText = song.difficulty;
     badge.className = 'notify-badge badge-pill'+' d'+song.difficulty;
 
+    let clickable = document.createElement('a');
+    clickable.className = 'stretched-link';
+    clickable.setAttribute('href','#');
+    clickable.setAttribute('data-toggle','modal');
+    clickable.setAttribute('data-target','#exampleModalCenter');
+
     card.appendChild(cardImg);
     cardBody.appendChild(name);
     cardBody.appendChild(text);
     cardBody.appendChild(badge);
+    cardBody.appendChild(clickable);
     card.appendChild(cardBody);
     songList.appendChild(card);
 

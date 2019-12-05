@@ -4,9 +4,13 @@
 }
 
 body, html {
-    background: #e0e0e0;
+    background-image: linear-gradient(40deg, gold, orangered);
     text-align: center;
     padding: 30px;
+}
+
+li.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 ul {
@@ -43,6 +47,7 @@ input {
 .card {
     margin: 5px;
     width: 300px;
+    border: 0;
     min-width: 200px;
     max-width: 350px;
     padding-left: 0;
@@ -59,21 +64,21 @@ input {
 }
 
 .dEasy{
-    background-image: linear-gradient(40deg, cyan, greenyellow);
-    color: #4f4f38;
+    background-image: linear-gradient(40deg, cyan, #00ff0f);
+    color: #373737;
 }
 
 .dMedium{
     background-image: linear-gradient(40deg, gold, orangered);
-    color: whitesmoke;
+    color: white;
 }
 
 .dHard{
-    background-image: linear-gradient(40deg, #ff0011, #541818);
-    color: whitesmoke;
+    background-image: linear-gradient(40deg, #ff00b0, #ff0000);
+    color: white;
 }
 
 .dExtreme{
-    background-image: linear-gradient(40deg, #0607ff, #28152c);
-    color: whitesmoke;
+    background-image: linear-gradient(40deg, #8e34ff, #0400ff);
+    color: white;
 }

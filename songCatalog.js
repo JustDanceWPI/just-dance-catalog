@@ -1,4 +1,4 @@
-[
+let songs = [
     {
         "name": "A Little Party Never Killed Nobody (All We Got)",
         "artist": "Fergie Ft. Q-Tip, GoonRock",
@@ -259,4 +259,4 @@
         "theme": "Tomato",
         "ref": "https://vignette.wikia.nocookie.net/justdance/images/d/de/Automatonalt_cover_generic.jpg/revision/latest/scale-to-width-down/180?cb=20171015184939"
     }
-]
+];
