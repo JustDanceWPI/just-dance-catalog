@@ -17,20 +17,20 @@
     <!-- Primary Meta Tags -->
     <title>Just Dance Query</title>
     <meta name="title" content="Just Dance Query | Queue up your songs for some of Goat's Head Restaurant's event!">
-    <meta name="description" content="A free Just Dance app used for querying song into a Google Sheets spreadsheets for WPI students. Presented by Goat's Head Restaurant, funded by SGA | Come dance and have fun!">
+    <meta name="description" content="A free Just Dance app used for queueing songs into a Google Sheets spreadsheets for WPI students. Presented by Goat's Head Restaurant, funded by SGA | Come dance and have fun!">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://justdancewpi.github.io/just-dance-catalog/">
     <meta property="og:title" content="Just Dance Query | Queue up your songs for some of Goat's Head Restaurant's event!">
-    <meta property="og:description" content="A free Just Dance app used for querying song into a Google Sheets spreadsheets for WPI students. Presented by Goat's Head Restaurant, funded by SGA | Come dance and have fun!">
+    <meta property="og:description" content="A free Just Dance app used for queueing songs into a Google Sheets spreadsheets for WPI students. Presented by Goat's Head Restaurant, funded by SGA | Come dance and have fun!">
     <meta property="og:image" content="https://raw.githubusercontent.com/JustDanceWPI/just-dance-catalog/master/img/jdcover.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://justdancewpi.github.io/just-dance-catalog/">
     <meta property="twitter:title" content="Just Dance Query | Queue up your songs for some of Goat's Head Restaurant's event!">
-    <meta property="twitter:description" content="A free Just Dance app used for querying song into a Google Sheets spreadsheets for WPI students. Presented by Goat's Head Restaurant, funded by SGA | Come dance and have fun!">
+    <meta property="twitter:description" content="A free Just Dance app used for queueing songs into a Google Sheets spreadsheets for WPI students. Presented by Goat's Head Restaurant, funded by SGA | Come dance and have fun!">
     <meta property="twitter:image" content="https://raw.githubusercontent.com/JustDanceWPI/just-dance-catalog/master/img/jdcover.png">
 
     <meta name="keywords" content="Just Dance, Unlimited, Catalog, WPI, Goat's Head">
@@ -71,23 +71,25 @@
         </div>
     </div>
 </div>
-<!-- Modal 2 -->
+<!--Modal 2-->
 <div class="modal fade" id="submitSongModal" tabindex="-1" role="dialog" aria-labelledby="submitSongModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="submitSongModalTitle">Submit this song for queue?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="function f() {
+                  $('.modal').forEach(this.modal('hide'));
+                }">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <iframe id="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdSh_talpniBWAWFUA3DooVtuBHbAAhor1WTbl6P3NtfZnMJw/viewform?embedded=true">Loading…</iframe>
+                <iframe class="modal-body" id="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdSh_talpniBWAWFUA3DooVtuBHbAAhor1WTbl6P3NtfZnMJw/viewform?embedded=true">Loading…</iframe>
             </div>
+            <div class="modal-footer"></div>
         </div>
     </div>
 </div>
-
 <!-- Google Forms iframe -->
 <!--list of songs to be populated-->
 <ul id="songList" class="row">
