@@ -21,8 +21,9 @@ let createSongCard = (song) => {
     name.className = 'card-title song-name';
 
     let text = document.createElement('p');
-    text.innerText = song.artist+'\n'+song.origin+'\n';
-    if(song.theme){text.innerText.concat(song.theme+'Version')}
+    let theme = "";
+    if(song.theme){(theme = song.theme+' Version')}
+    text.innerText = song.artist+'\n'+song.origin+'\n'+theme;
     text.className = 'card-text song-text';
 
     let badge = document.createElement('span');
@@ -41,10 +42,14 @@ let createSongCard = (song) => {
         $("#selectCardText")[0].innerText = text.innerText;
         selectBadge.innerText = badge.innerText;
         selectBadge.className = 'notify-badge badge-pill'+' d'+song.difficulty;
+
+        // update form
+        document.getElementById('songName').setAttribute('value',song.name);
+        document.getElementById('songArtist').setAttribute('value',song.artist);
+        document.getElementById('songOrigin').setAttribute('value',song.origin);
+        document.getElementById('songTheme').setAttribute('value',theme);
+        document.getElementById('songDifficulty').setAttribute('value',song.difficulty);
     };
-
-
-
 
     card.appendChild(cardImg);
     cardBody.appendChild(name);
@@ -66,17 +71,4 @@ let initListOfSongs = () => {
     songs.forEach((task) => {
         createSongCard(task)
     })
-};
-
-let selectSong = () => {
-    let selectDifficulty = $("#selectCardBadge")[0].innerText;
-    let selectName = $("#selectCardName")[0].innerText;
-    let selectText = selectDifficulty.concat($("#selectCardText")[0].innerText);
-    let newLink = 'https://docs.google.com/forms/d/e/1FAIpQLSdSh_talpniBWAWFUA3DooVtuBHbAAhor1WTbl6P3NtfZnMJw/viewform?embedded=true&' +
-        'entry.287909225=name' +
-        '&entry.133747851=email' +
-        '&entry.844728591=' + selectName +
-        '&entry.897182823=' + selectText;
-    $("#google-form")[0].setAttribute('src', newLink);
-
 };

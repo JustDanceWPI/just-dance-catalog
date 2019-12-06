@@ -55,42 +55,45 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <img id="selectCardImg" class="card-img-top" src="https://via.placeholder.com/150" alt="Placeholder image"/>
-                <div class="card-body d-flex flex-column">
-                    <h5 id="selectCardName" class="card-title">name</h5>
-                    <p id="selectCardText" class="card-text">text</p>
-                    <badge id="selectCardBadge" class='notify-badge badge-pill'>badge</badge>
+            <iframe id="hidden_iframe" name="hidden_iframe" style="display:none"></iframe>
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSdSh_talpniBWAWFUA3DooVtuBHbAAhor1WTbl6P3NtfZnMJw/formResponse"
+            method="post" onsubmit='window.location="display.html"' target="hidden_iframe">
+                <div class="modal-body">
+                    <img id="selectCardImg" class="card-img-top" src="https://via.placeholder.com/150" alt="Placeholder image"/>
+                    <div class="form-row">
+                    <div class="form-group col">
+                        <label for="nameInput">Name of group or individual</label>
+                        <input name="entry.287909225" type="text" class="form-control" id="nameInput" aria-describedby="nameHelp" placeholder="Enter name">
+                        <small id="nameHelp" class="form-text text-muted">In case two similar songs are posted</small>
+                    </div>
+                    <div class="form-group col">
+                        <label for="emailInput">Email</label>
+                        <input name="entry.133747851" type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">Prizes are awarded over email</small>
+                    </div>
+                    </div>
+                    <div class="card-body d-flex flex-column form-group">
+                        <h5 id="selectCardName" class="card-title">Song Name</h5>
+                        <input name="entry.897182823" type="hidden" id="songName" value=""/>
+                        <p id="selectCardText" class="card-text">Song Details</p>
+                        <input name="entry.844728591" type="hidden" id="songArtist" value=""/>
+                        <input name="entry.1545970410" type="hidden" id="songOrigin" value=""/>
+                        <input name="entry.813110502" type="hidden" id="songTheme" value=""/>
+                        <input name="entry.1348281837" type="hidden" id="songDifficulty" value=""/>
+                        <badge id="selectCardBadge" class='notify-badge badge-pill'>badge</badge>
+                    </div>
+
+
                 </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary btn-block btn-confirm" value="Submit">
+                </div>
+            </form>
 
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-block btn-confirm" data-toggle="modal" data-target="#submitSongModal" onclick="selectSong()">Continue</button>
-            </div>
         </div>
     </div>
 </div>
-<!--Modal 2-->
-<div class="modal fade" id="submitSongModal" tabindex="-1" role="dialog" aria-labelledby="submitSongModalTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="submitSongModalTitle">Submit this song for queue?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="function f() {
-                  $('.modal').forEach(this.modal('hide'));
-                }">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <iframe class="modal-body" id="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdSh_talpniBWAWFUA3DooVtuBHbAAhor1WTbl6P3NtfZnMJw/viewform?embedded=true">Loading…</iframe>
-            </div>
-            <div class="modal-footer"></div>
-        </div>
-    </div>
-</div>
-<!-- Google Forms iframe -->
+
 <!--list of songs to be populated-->
 <ul id="songList" class="row">
 </ul>
