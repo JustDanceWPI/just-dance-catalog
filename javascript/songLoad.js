@@ -71,12 +71,12 @@ let initListOfSongs = () => {
 let selectSong = () => {
     let selectDifficulty = $("#selectCardBadge")[0].innerText;
     let selectName = $("#selectCardName")[0].innerText;
-    let selectText = $("#selectCardText")[0].innerText;
+    let selectText = selectDifficulty.concat($("#selectCardText")[0].innerText);
     let newLink = 'https://docs.google.com/forms/d/e/1FAIpQLSdSh_talpniBWAWFUA3DooVtuBHbAAhor1WTbl6P3NtfZnMJw/viewform?embedded=true&' +
-        'entry.897182823='+selectName+'&' +
-        'entry.844728591='+selectText+' '+selectDifficulty+'&' +
-        'entry.287909225=name&' +
-        'entry.133747851=email';
+        'entry.287909225=name' +
+        '&entry.133747851=email' +
+        '&entry.844728591=' + selectName +
+        '&entry.897182823=' + selectText;
     $("#google-form")[0].setAttribute('src', newLink);
 
 };

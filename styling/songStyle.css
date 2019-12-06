@@ -108,3 +108,10 @@ body::-webkit-scrollbar {
 body {
     -ms-overflow-style: none;
 }
+
+iframe {
+    width: 100%;
+    height: 90vh;
+    border: 0;
+
+}
