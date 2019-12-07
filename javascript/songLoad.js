@@ -9,10 +9,11 @@ let createSongCard = (song) => {
     card.setAttribute('href','#');
     card.setAttribute('data-toggle','modal');
     card.setAttribute('data-target','#exampleModalCenter');
+    let cardA = document.createElement('a');
+    cardA.setAttribute('href','#nameInput');
 
     let cardImg = document.createElement('img');
     cardImg.className = 'card-img-top';
-    cardImg.setAttribute('href','#');
     cardImg.setAttribute('data-toggle','modal');
     cardImg.setAttribute('data-target','#selectSongModal');
     if(song.gsx$ref.$t){cardImg.src = song.gsx$ref.$t}
@@ -49,7 +50,8 @@ let createSongCard = (song) => {
         document.getElementById('songDifficulty').setAttribute('value',song.gsx$difficulty.$t);
     };
 
-    card.appendChild(cardImg);
+    cardA.appendChild(cardImg);
+    card.appendChild(cardA);
     cardBody.appendChild(name);
     cardBody.appendChild(text);
     cardBody.appendChild(badge);
