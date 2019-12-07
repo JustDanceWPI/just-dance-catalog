@@ -21,3 +21,10 @@ function searchFunction() {
         }
     }
 }
+
+function onSearchKeyPress(event) {
+    if (event.keyCode === 13){
+        event.preventDefault();
+        searchFunction();
+    }
+}

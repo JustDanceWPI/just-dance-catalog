@@ -24,7 +24,7 @@ let createSongCard = (song) => {
     let text = document.createElement('p');
     let theme = "";
     if(song.gsx$theme.$t){(theme = song.gsx$theme.$t+' Version')}
-    text.innerText = song.gsx$artist.$t+'\n'+song.gsx$origin.$t+'\n'+theme;
+    text.innerText = song.gsx$artist.$t+'\nJust Dance '+song.gsx$origin.$t+'\n'+theme;
     text.className = 'card-text song-text';
 
     let badge = document.createElement('span');

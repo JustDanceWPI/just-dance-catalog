@@ -22,10 +22,6 @@ html {
     min-width: 30rem;
 }
 
-.card-img-top{
-    max-width: 20rem;
-}
-
 .modal-header{
     border: 0;
 }
@@ -41,6 +37,20 @@ html {
 
 .btn-confirm {
     height: 5rem;
+}
+
+.card {
+    margin: 5px;
+    border: 0;
+    width: 30vmin;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card-text, .card-title{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 li.card {
@@ -72,14 +82,6 @@ input {
     outline: 0;
     box-sizing: border-box;
     font-weight: 400;
-}
-
-.card {
-    margin: 5px;
-    border: 0;
-    width: 20rem;
-    padding-left: 0;
-    padding-right: 0;
 }
 
 .notify-badge{
