@@ -1,3 +1,5 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +11,8 @@ body, html {
 }
 body {
     padding: 30px;
-    min-height: 100vh;
-    background-image: linear-gradient(#6eff73, #103a42);
-    -webkit-background-image: -webkit-linear-gradient(#6eff73, #103a42);
-    background-attachment: fixed;
+    background: white;
+    background-attachment: scroll;
 }
 
 html {
@@ -59,30 +59,42 @@ ul {
 }
 
 .search-bar {
-    font-size: 5vmin;
+    border-radius: 3rem;
+    font-size: 4vmin;
     position: relative;
     align-content: center;
     margin: 5vh auto;
+    border: 1rem;
+    padding: 1rem;
     width: auto;
     height: auto;
-    background: rgba(0,0,0,0);
+    background: #555;
     overflow: hidden;
 }
 
 input {
     width: 90%;
     height: 90%;
-    border: 0;
+    border: 1px;
     border-radius: 0;
     outline: 0;
     box-sizing: border-box;
     font-weight: 400;
 }
 
+.search-bar .fa-search {
+    position: relative;
+    color: white;
+}
+
+
 #searchInput {
     background: rgba(0,0,0,0);
     color: #fff;
+    text-anchor: middle;
+    border-bottom-width: 1rem;
 }
+
 
 .notify-badge{
     position: absolute;
@@ -134,4 +146,3 @@ body {
 h5 {
     line-height: 1.5;
 }
-
