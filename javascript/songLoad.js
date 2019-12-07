@@ -33,12 +33,6 @@ let createSongCard = (song) => {
     let badge = document.createElement('span');
     badge.innerText = song.gsx$difficulty.$t;
     badge.className = 'difficulty notify-badge badge-pill'+' d'+song.gsx$difficulty.$t;
-
-    // let clickable = document.createElement('a');
-    // clickable.className = 'stretched-link';
-    // clickable.setAttribute('href','#');
-    // clickable.setAttribute('data-toggle','modal');
-    // clickable.setAttribute('data-target','#selectSongModal');
     cardImg.onclick = () => {
         let selectBadge = $("#selectCardBadge")[0];
         $("#selectCardImg")[0].src = cardImg.src;
@@ -59,10 +53,9 @@ let createSongCard = (song) => {
     cardBody.appendChild(name);
     cardBody.appendChild(text);
     cardBody.appendChild(badge);
-    // cardBody.appendChild(clickable);
     card.appendChild(cardBody);
     songList.appendChild(card);
-
+    card.style.display = 'none';
 };
 
 let initListOfSongs = () => {
