@@ -13,9 +13,7 @@ body {
 }
 
 html {
-    background-image: linear-gradient(40deg, #ff5c4f, #b393ff);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: white;
 }
 
 .modal-dialog{
@@ -31,7 +29,7 @@ html {
     border: 0;
 }
 
-.btn-confirm,#selectCardImg {
+.btn-confirm,#selectCardImg, .card-img-top {
     border-radius: 0;
 }
 
@@ -53,24 +51,19 @@ html {
     overflow: hidden;
 }
 
-li.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 ul {
     justify-content: center;
 }
 
 .search-bar {
+    font-size: 5vmin;
     position: relative;
-    margin: auto;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    width: 60vw;
-    height: 5vh;
+    align-content: center;
+    margin: 5vh auto;
+    width: auto;
+    height: auto;
     background: #fff;
     border-radius: 2px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
     overflow: hidden;
 }
 
@@ -128,5 +121,9 @@ body {
     align-content: center;
     padding: 5px;
     margin: 5px;
-    width: 90%;
+    width: 100%;
+}
+
+h5 {
+    line-height: 1.5;
 }

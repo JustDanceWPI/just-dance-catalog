@@ -12,6 +12,9 @@ let createSongCard = (song) => {
 
     let cardImg = document.createElement('img');
     cardImg.className = 'card-img-top';
+    cardImg.setAttribute('href','#');
+    cardImg.setAttribute('data-toggle','modal');
+    cardImg.setAttribute('data-target','#selectSongModal');
     if(song.gsx$ref.$t){cardImg.src = song.gsx$ref.$t}
 
     let cardBody = document.createElement('div');
@@ -31,12 +34,12 @@ let createSongCard = (song) => {
     badge.innerText = song.gsx$difficulty.$t;
     badge.className = 'difficulty notify-badge badge-pill'+' d'+song.gsx$difficulty.$t;
 
-    let clickable = document.createElement('a');
-    clickable.className = 'stretched-link';
-    clickable.setAttribute('href','#');
-    clickable.setAttribute('data-toggle','modal');
-    clickable.setAttribute('data-target','#selectSongModal');
-    clickable.onclick = () => {
+    // let clickable = document.createElement('a');
+    // clickable.className = 'stretched-link';
+    // clickable.setAttribute('href','#');
+    // clickable.setAttribute('data-toggle','modal');
+    // clickable.setAttribute('data-target','#selectSongModal');
+    cardImg.onclick = () => {
         let selectBadge = $("#selectCardBadge")[0];
         $("#selectCardImg")[0].src = cardImg.src;
         $("#selectCardName")[0].innerText = name.innerText;
@@ -56,7 +59,7 @@ let createSongCard = (song) => {
     cardBody.appendChild(name);
     cardBody.appendChild(text);
     cardBody.appendChild(badge);
-    cardBody.appendChild(clickable);
+    // cardBody.appendChild(clickable);
     card.appendChild(cardBody);
     songList.appendChild(card);
 
@@ -69,9 +72,12 @@ let initListOfSongs = () => {
     }
 
     songList = document.getElementById('songList');
-    songs.forEach((task) => {
-        createSongCard(task)
-    });
+    // songs.forEach((task) => {
+    //     createSongCard(task)
+    // });
+    for (var i = 0, len = songs.length; i < len; i++) {
+        createSongCard(songs[i]);
+    }
 };
 
 let importGSS = (t) => {
