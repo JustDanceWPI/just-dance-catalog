@@ -1,6 +1,9 @@
 let songList, savedEmail, savedName;
 savedEmail = "";
 savedName = "";
+
+let urlSongs = "https://spreadsheets.google.com/feeds/list/17GyOOWi7aNLgscGYXgpzWIPZGMb3w5fD6CIGu677Mck/1/public/values?alt=json";
+
 let createSongCard = (song) => {
 
     let card = document.createElement('li');
@@ -11,24 +14,24 @@ let createSongCard = (song) => {
 
     let cardImg = document.createElement('img');
     cardImg.className = 'card-img-top';
-    if(song.ref){cardImg.src = song.ref}
+    if(song.gsx$ref.$t){cardImg.src = song.gsx$ref.$t}
 
     let cardBody = document.createElement('div');
     cardBody.className = 'card-body d-flex flex-column';
 
     let name = document.createElement('h5');
-    name.innerText = song.name;
+    name.innerText = song.gsx$name.$t;
     name.className = 'card-title song-name';
 
     let text = document.createElement('p');
     let theme = "";
-    if(song.theme){(theme = song.theme+' Version')}
-    text.innerText = song.artist+'\n'+song.origin+'\n'+theme;
+    if(song.gsx$theme.$t){(theme = song.gsx$theme.$t+' Version')}
+    text.innerText = song.gsx$artist.$t+'\n'+song.gsx$origin.$t+'\n'+theme;
     text.className = 'card-text song-text';
 
     let badge = document.createElement('span');
-    badge.innerText = song.difficulty;
-    badge.className = 'difficulty notify-badge badge-pill'+' d'+song.difficulty;
+    badge.innerText = song.gsx$difficulty.$t;
+    badge.className = 'difficulty notify-badge badge-pill'+' d'+song.gsx$difficulty.$t;
 
     let clickable = document.createElement('a');
     clickable.className = 'stretched-link';
@@ -41,14 +44,14 @@ let createSongCard = (song) => {
         $("#selectCardName")[0].innerText = name.innerText;
         $("#selectCardText")[0].innerText = text.innerText;
         selectBadge.innerText = badge.innerText;
-        selectBadge.className = 'notify-badge badge-pill'+' d'+song.difficulty;
+        selectBadge.className = 'notify-badge badge-pill'+' d'+song.gsx$difficulty.$t;
 
         // update form
-        document.getElementById('songName').setAttribute('value',song.name);
-        document.getElementById('songArtist').setAttribute('value',song.artist);
-        document.getElementById('songOrigin').setAttribute('value',song.origin);
+        document.getElementById('songName').setAttribute('value',song.gsx$name.$t);
+        document.getElementById('songArtist').setAttribute('value',song.gsx$artist.$t);
+        document.getElementById('songOrigin').setAttribute('value',song.gsx$origin.$t);
         document.getElementById('songTheme').setAttribute('value',theme);
-        document.getElementById('songDifficulty').setAttribute('value',song.difficulty);
+        document.getElementById('songDifficulty').setAttribute('value',song.gsx$difficulty.$t);
     };
 
     card.appendChild(cardImg);
@@ -70,5 +73,5 @@ let initListOfSongs = () => {
     songList = document.getElementById('songList');
     songs.forEach((task) => {
         createSongCard(task)
-    })
+    });
 };
