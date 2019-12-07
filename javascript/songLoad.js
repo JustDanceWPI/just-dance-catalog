@@ -1,8 +1,6 @@
-let songList, savedEmail, savedName;
+let songList, savedEmail, savedName, songs;
 savedEmail = "";
 savedName = "";
-
-let urlSongs = "https://spreadsheets.google.com/feeds/list/17GyOOWi7aNLgscGYXgpzWIPZGMb3w5fD6CIGu677Mck/1/public/values?alt=json";
 
 let createSongCard = (song) => {
 
@@ -74,4 +72,8 @@ let initListOfSongs = () => {
     songs.forEach((task) => {
         createSongCard(task)
     });
+};
+
+let importGSS = (t) => {
+    songs = t.feed.entry;
 };
