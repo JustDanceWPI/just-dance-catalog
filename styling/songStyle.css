@@ -73,6 +73,7 @@ ul {
 }
 
 input {
+    pointer-events: bounding-box;
     width: 90%;
     height: 90%;
     border: 1px;
@@ -85,6 +86,7 @@ input {
 .search-bar .fa-search {
     position: relative;
     color: white;
+    pointer-events: none;
 }
 
 
