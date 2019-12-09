@@ -41,14 +41,13 @@
 </head>
 <body>
 <!-- Navigation bar and search bar -->
-<header>
-<!--  Navigation bar  -->
-<!--   Search bar     -->
+<header class="sticky-top navbar-expand-md">
+
     <form>
-        <div class="search-bar">
+        <div class="search-bar sticky-top position-sticky">
             <span class="fa fa-search"></span>
             <label for="searchInput"></label>
-            <input type="text" name="search" value="Just Dance" autocomplete="off" id="searchInput" onkeyup="searchFunction(20, true)" placeholder="Search by name, artist, or difficulty">
+            <input type="text" name="search" autocomplete="off" id="searchInput" value="" placeholder="Search by name, artist, or difficulty" onkeyup="searchFunction(20, true)">
         </div>
     </form>
 </header>
@@ -76,7 +75,7 @@
                     <div class="form-group col">
                         <label for="emailInput">Email</label>
                         <input name="entry.133747851" type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">Prizes are awarded over email</small>
+                        <small id="emailHelp" class="form-text text-muted">Prizes are awarded via email</small>
                     </div>
                     </div>
                     <div class="card-body d-flex flex-column form-group">
@@ -106,7 +105,10 @@
 <script src="https://spreadsheets.google.com/feeds/list/17GyOOWi7aNLgscGYXgpzWIPZGMb3w5fD6CIGu677Mck/1/public/values?alt=json-in-script&callback=importGSS"
          onload="initListOfSongs()"></script>
 <script>
-    searchFunction(25, true);
-</script>
+    let urlParams = new URLSearchParams(window.location.search);
+    let searchQuery = urlParams.get('search');
+    if(searchQuery)
+    {$(searchInput).val(searchQuery)} else {$(searchInput).val('Just Dance')}
+    searchFunction(20, true)</script>
 </body>
 </html>

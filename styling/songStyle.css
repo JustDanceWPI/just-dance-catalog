@@ -9,10 +9,10 @@ body, html {
     font-size: 2vmin;
     text-align: center;
 }
+
 body {
     padding: 30px;
-    background: white;
-    background-attachment: scroll;
+    background: white scroll;
 }
 
 html {
@@ -68,7 +68,7 @@ ul {
     padding: 1rem;
     width: auto;
     height: auto;
-    background: #555;
+    background: rgba(55,55,55,.5);
     overflow: hidden;
 }
 
