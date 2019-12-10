@@ -6,17 +6,16 @@
 }
 
 body, html {
-    font-size: 2vmin;
     text-align: center;
 }
 
 body {
-    padding: 30px;
-    background: white scroll;
+    background: white;
 }
 
 html {
     background: white;
+    padding: 30px;
 }
 
 .modal-dialog{
@@ -59,7 +58,7 @@ ul {
 }
 
 .search-bar {
-    border-radius: 3rem;
+    border-radius: 4rem;
     font-size: 4vmin;
     position: relative;
     align-content: center;
@@ -74,7 +73,7 @@ ul {
 
 input {
     pointer-events: bounding-box;
-    width: 90%;
+    width: 85%;
     height: 90%;
     border: 1px;
     border-radius: 0;
@@ -83,20 +82,25 @@ input {
     font-weight: 400;
 }
 
-.search-bar .fa-search {
+.search-bar .fa {
     position: relative;
     color: white;
     pointer-events: none;
 }
 
-
-#searchInput {
+#searchInput, #searchButton{
     background: rgba(0,0,0,0);
     color: #fff;
-    text-anchor: middle;
     border-bottom-width: 1rem;
 }
 
+#searchInput::placeholder{
+    color: rgba(255,255,255,0.5);
+}
+
+header{
+    padding-top: 1px;
+}
 
 .notify-badge{
     position: absolute;

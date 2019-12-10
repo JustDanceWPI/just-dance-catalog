@@ -12,5 +12,6 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="popper" level="application" />
     <orderEntry type="library" name="jquery.mark.es6" level="application" />
+    <orderEntry type="library" name="animate" level="application" />
   </component>
 </module>

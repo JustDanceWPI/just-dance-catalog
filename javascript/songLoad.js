@@ -10,7 +10,7 @@ let createSongCard = (song) => {
     card.setAttribute('data-toggle','modal');
     card.setAttribute('data-target','#exampleModalCenter');
     let cardA = document.createElement('a');
-    cardA.setAttribute('href','#nameInput');
+    cardA.setAttribute('href','#searchInput');
 
     let cardImg = document.createElement('img');
     cardImg.className = 'card-img-top';
@@ -73,6 +73,7 @@ let initListOfSongs = () => {
     for (var i = 0, len = songs.length; i < len; i++) {
         createSongCard(songs[i]);
     }
+    
 };
 
 let importGSS = (t) => {

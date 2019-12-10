@@ -5,12 +5,14 @@
 <link rel="stylesheet" href="styling/songStyle.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <!-- custom scripts -->
 <script src="javascript/songSearch.js"></script>
 <script src="javascript/songLoad.js"></script>
 <script src="javascript/displayData.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.es6.min.js"></script>
+
 
 <link rel="icon" href="img/party.png" type="image/png">
 <head>
@@ -41,13 +43,13 @@
 </head>
 <body>
 <!-- Navigation bar and search bar -->
-<header class="sticky-top navbar-expand-md">
-
+<header class="sticky-top">
     <form>
-        <div class="search-bar sticky-top position-sticky">
-            <span class="fa fa-search"></span>
+        <div class="search-bar navbar sticky-top position-sticky">
+            <span class="fa fa-search" id="searchButton" style="padding-left: 2rem;"></span>
             <label for="searchInput"></label>
             <input type="text" name="search" autocomplete="off" id="searchInput" value="" placeholder="Search by name, artist, or difficulty" onkeyup="searchFunction(20, true)">
+            <span class="fa fa-bars" style="padding-right: 2rem;"></span>
         </div>
     </form>
 </header>
@@ -108,7 +110,8 @@
     let urlParams = new URLSearchParams(window.location.search);
     let searchQuery = urlParams.get('search');
     if(searchQuery)
-    {$(searchInput).val(searchQuery)} else {$(searchInput).val('Just Dance')}
-    searchFunction(20, true)</script>
+    {$(searchInput).val(searchQuery)}
+    searchFunction(20, true)
+</script>
 </body>
 </html>

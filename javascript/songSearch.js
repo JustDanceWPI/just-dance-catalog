@@ -4,13 +4,13 @@ function searchFunction(limit, refresh) {
     let input, filter, ul, li, song, text, i, c, d;
     input = document.getElementById('searchInput');
     filter = input.value.toLowerCase();
+    if(filter === ""){filter='just dance'}
     ul = document.getElementById('songList');
     li = ul.getElementsByTagName('li');
     if(refresh){
         for(i=0; i< li.length; i++){
             li[i].style.display = 'none';
     }}
-    if(!filter){return}
     for(i=0, c=0 ; i< li.length && c < displayLimit; i++){
         song = document.getElementsByClassName('song-name')[i];
         text = document.getElementsByClassName('song-text')[i];
