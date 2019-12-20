@@ -73,7 +73,6 @@ let initListOfSongs = () => {
     for (var i = 0, len = songs.length; i < len; i++) {
         createSongCard(songs[i]);
     }
-    
 };
 
 let importGSS = (t) => {
