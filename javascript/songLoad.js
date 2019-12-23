@@ -10,7 +10,7 @@ let createSongCard = (song) => {
     card.setAttribute('data-toggle','modal');
     card.setAttribute('data-target','#exampleModalCenter');
     let cardA = document.createElement('a');
-    cardA.setAttribute('href','#searchInput');
+    cardA.setAttribute('href','javascript:void(0);');
 
     let cardImg = document.createElement('img');
     cardImg.className = 'card-img-top';
@@ -27,8 +27,8 @@ let createSongCard = (song) => {
 
     let text = document.createElement('p');
     let theme = "";
-    if(song.gsx$theme.$t){(theme = song.gsx$theme.$t+' Version')}
-    text.innerText = song.gsx$artist.$t+'\nJust Dance '+song.gsx$origin.$t+'\n'+theme;
+    if(song.gsx$theme.$t){(theme = song.gsx$theme.$t+' Version\n')}
+    text.innerText = song.gsx$artist.$t+'\nJust Dance '+song.gsx$origin.$t+'\n'+theme+song.gsx$people.$t;
     text.className = 'card-text song-text';
 
     let badge = document.createElement('span');

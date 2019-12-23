@@ -23,11 +23,11 @@ ul {
 }
 
 h5 {
-    line-height: 1.5;
+    line-height: 1;
 }
 
 .modal-dialog{
-    min-width: 30rem;
+    min-width: 20rem;
 }
 
 .modal-header{
@@ -39,11 +39,11 @@ h5 {
     border: 0;
 }
 
-.btn-confirm,#selectCardImg, .card-img-top {
+.btn-confirm,#selectCardImg, .card-img-top, .btn-danger {
     border-radius: 0;
 }
 
-.btn-confirm {
+.btn-confirm, .btn-danger {
     height: 5rem;
 }
 
@@ -121,8 +121,8 @@ header{
     right: 10px;
     top:10px;
     text-align: center;
-    padding:.2vh 2vh;
-    font-size:2vh;
+    padding:.2rem 1rem;
+    font-size:1.5rem;
     font-weight: bolder;
 }
 
@@ -160,5 +160,20 @@ body {
     align-content: center;
     padding: 5px;
     margin: 5px;
-    width: 100%;
+    width: 97%;
+}
+
+/* Conditional responsiveness*/
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+    html {
+        font-size: medium;
+    }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 2.5vw;
+    }
 }

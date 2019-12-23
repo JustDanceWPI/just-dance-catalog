@@ -46,10 +46,10 @@
 <header class="sticky-top">
     <form>
         <div class="search-bar navbar sticky-top position-sticky">
-            <a href="#searchIcon" title="Search" id="searchIcon" class="navbar-item"><span class="fa fa-search button" id="searchButton"></span></a>
+            <a href="javascript:document.getElementById('searchInput').focus();" title="Search" id="searchIcon" class="navbar-item"><span class="fa fa-search button" id="searchButton"></span></a>
             <label for="searchInput"></label>
             <input type="text" name="search" autocomplete="off" id="searchInput" value="" placeholder="Search by name, artist, or difficulty" onkeyup="searchFunction(20, true)">
-            <a href="#menuIcon" title="Menu" id="menuIcon" class="navbar-item"><span class="fa fa-bars" ></span></a>
+            <a href="javascript:void(0);" title="Menu" id="menuIcon" class="navbar-item"><span class="fa fa-bars" ></span></a>
         </div>
     </form>
 </header>
@@ -69,12 +69,12 @@
                 <div class="modal-body">
                     <img id="selectCardImg" class="card-img-top" src="https://via.placeholder.com/150" alt="Placeholder image"/>
                     <div class="form-row">
-                    <div class="form-group col">
+                    <div class="form-group">
                         <label for="nameInput">Name of group or individual</label>
                         <input name="entry.287909225" type="text" class="form-control" id="nameInput" aria-describedby="nameHelp" placeholder="Enter name" required>
                         <small id="nameHelp" class="form-text text-muted">In case two similar songs are posted</small>
                     </div>
-                    <div class="form-group col">
+                    <div class="form-group">
                         <label for="emailInput">Email</label>
                         <input name="entry.133747851" type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email">
                         <small id="emailHelp" class="form-text text-muted">Prizes are awarded via email</small>
@@ -94,6 +94,7 @@
 
                 </div>
                 <div class="modal-footer">
+                    <input type="submit" class="btn btn-danger btn-block btn-primary" data-dismiss="modal" aria-label="Close" value="Close">
                     <input type="submit" class="btn btn-primary btn-block btn-confirm" value="Submit">
                 </div>
             </form>
