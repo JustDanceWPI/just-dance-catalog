@@ -48,8 +48,8 @@
         <div class="search-bar navbar sticky-top position-sticky">
             <a href="javascript:document.getElementById('searchInput').focus();" title="Search" id="searchIcon" class="navbar-item"><span class="fa fa-search button" id="searchButton"></span></a>
             <label for="searchInput"></label>
-            <input type="text" name="search" autocomplete="off" id="searchInput" value="" placeholder="Search by name, artist, or difficulty" onkeyup="searchFunction(20, true)">
-            <a href="javascript:void(0);" title="Menu" id="menuIcon" class="navbar-item"><span class="fa fa-bars" ></span></a>
+            <input type="text" name="search" autocomplete="off" id="searchInput" value="" placeholder="Click here to search or click icon on right to see scores" onkeyup="searchFunction(20, true)">
+            <a href="display.html" title="Table" id="tableIcon" class="navbar-item"><span class="fa fa-table" ></span></a>
         </div>
     </form>
 </header>
@@ -94,8 +94,8 @@
 
                 </div>
                 <div class="modal-footer">
-                    <input type="submit" class="btn btn-danger btn-block btn-primary" data-dismiss="modal" aria-label="Close" value="Close">
-                    <input type="submit" class="btn btn-primary btn-block btn-confirm" value="Submit">
+                    <input type="submit" class="btn btn-block btn-primary close-btn" data-dismiss="modal" aria-label="Close" value="Close">
+                    <input type="submit" class="btn btn-primary btn-block" value="Submit">
                 </div>
             </form>
 

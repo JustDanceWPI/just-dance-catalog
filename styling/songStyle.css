@@ -39,12 +39,26 @@ h5 {
     border: 0;
 }
 
-.btn-confirm,#selectCardImg, .card-img-top, .btn-danger {
+.btn-confirm,#selectCardImg, .card-img-top, .btn-secondary {
     border-radius: 0;
 }
 
-.btn-confirm, .btn-danger {
+.btn-primary{
+    border-radius: 0;
+    padding: 0;
+    margin: 0 !important;
     height: 5rem;
+    border-width: 0;
+}
+
+.close-btn {
+    margin-right: 0;
+    background-color: #e5e5e5 !important;
+    color: black;
+}
+.close-btn:hover {
+    background-color: #a5a5a5 !important;
+    color: black;
 }
 
 .card {

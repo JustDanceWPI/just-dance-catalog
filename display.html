@@ -38,7 +38,17 @@
 </head>
 <body>
 <div>
-    <table class="table table-striped table-light">
+    <header class="sticky-top">
+        <form>
+            <div class="search-bar navbar sticky-top position-sticky">
+                <a href="index.html" title="Table" id="tableIcon" class="navbar-item"><span class="fa fa-arrow-left" ></span></a>
+                <label for="searchInput"></label>
+                <input type="text" name="search" autocomplete="off" id="searchInput" value="" placeholder="Tonight's scores" readonly>
+                <a href="index.html" title="Search" id="searchIcon" class="navbar-item"><span class="fa fa-search button" id="searchButton"></span></a>
+            </div>
+        </form>
+    </header>
+    <table class="table table-striped table-light" id>
         <thead>
             <tr>
                 <th>Time</th>
